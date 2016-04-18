@@ -1,0 +1,15 @@
+body {
+  background-color: #2E0927;
+  font-weight: bolder;
+}
+.well {
+  margin: 25px;
+  background-color: #FF2D00;
+
+}
+.container {
+  margin: 20px;
+  background-color: #04756F;
+  color: #FF8C00;
+  padding: 25px;
+}

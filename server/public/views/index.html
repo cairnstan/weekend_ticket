@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html ng-app="ticketApp">
+  <head>
+    <meta charset="utf-8">
+    <title>TICKETS</title>
+    <!-- LIBRARIES -->
+    <script src="vendor/angular/angular.min.js"></script>
+    <link rel="stylesheet" href="vendor/bootstrap.min.css"></script>
+
+    <!-- DEVELOPMENT -->
+    <script src="assets/scripts/client.min.js"></script>
+    <link rel="stylesheet" href="views/styles.css" />
+  </head>
+
+  <body>
+    <div ng-controller="TicketController" class="container">
+      <h1>LET'S GET SOME TICKETS!!!!!</h1>
+      <form role="form">
+        <div class="form-group">
+          <p>NAME: </p>
+          <input type="text" class="form control" ng-model="ticket.name" />
+          <!-- <br /> -->
+        </div>
+        <div class="form-group">
+          <p>TYPE: </p>
+          <input type="text" class="form control" ng-model="ticket.type" />
+          <!-- <br /> -->
+        </div>
+        <div class="form-group">
+          <p>PRIORITY: </p>
+          <input type="text" class="form control" ng-model="ticket.priority" />
+          <!-- <br /> -->
+        </div>
+        <div class="form-group">
+          <p>DESCRIPTION: </p>
+          <input type="text" class="form control" ng-model="ticket.description" />
+          <!-- <br /> -->
+        </div>
+        <div class="form-group">
+          <p>ASSIGNEE: </p>
+          <input type="text" class="form control" ng-model="ticket.assignee" />
+          <!-- <br /> -->
+        </div>
+        <div class="form-group">
+          <p>REPORTER: </p>
+          <input type="text" class="form control" ng-model="ticket.reporter" />
+          <!-- <br /> -->
+        </div>
+        <button ng-click="createNewTicket(ticket)" class="btn btn-success"/>CREATE TICKET</button>
+      </form>
+      <div ng-repeat="ticket in tickets" class="well">
+        <p>Name: {{ticket.name}}</p>
+        <p>Type: {{ticket.type}}</p>
+        <p>Priority: {{ticket.priority}}</p>
+        <p>Description: {{ticket.description}}</p>
+        <p>Assignee: {{ticket.assignee}}</p>
+        <p>Reporter: {{ticket.reporter}}</p>
+        <p>Date Created: {{dateCreated}}</p>
+        <p>Date Updated: {{dateUpdated}}</p>
+      </div>
+    </div>
+
+  </body>
+</html>
